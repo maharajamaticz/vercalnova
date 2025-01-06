@@ -1,0 +1,159 @@
+.chatListPage {
+    height: 100%;
+}
+
+.chatListPage .headPart h2 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.chatListContainer {
+    height: 85%;
+}
+
+.chatListContainer .searchBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #77777746;
+    border-radius: 100px;
+}
+
+.chatListContainer .searchBox input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 100px;
+    outline: none;
+    color: #fff;
+}
+
+.chatListContainer .searchBox button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0.1rem 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.chatListContainer .searchBox button:active {
+    transform: scale(0.9);
+}
+
+.chatListContainer .searchBox button img {
+    width: 25px;
+}
+
+.chatListContainer .chatListWrapper {
+    padding: 1rem 0;
+    height: 90%;
+    overflow: auto;
+}
+
+.chatListContainer .chatListWrapper ul {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatListContainer .chatListWrapper ul li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.chatListContainer .chatListWrapper ul li:hover {
+    background-color: #ffffff17;
+}
+
+.chatListContainer .chatListWrapper ul li .leftPart {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chatListContainer .chatListWrapper ul li .leftPart .imgPart {
+    /* width: 50px; */
+    width: max(30px, var(--fs50));
+}
+
+.chatListContainer .chatListWrapper ul li .leftPart .imgPart img {
+    width: 100%;
+    outLine: 1px solid #fff;
+    outline-offset: 5px;
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+
+.chatListContainer .chatListWrapper ul li .leftPart .imgPart img:hover {
+    outline-offset: 0;
+}
+
+.chatListContainer .chatListWrapper ul li .leftPart .detailsPart h3 {
+    /* font-size: 1.2rem; */
+    font-size: max(0.8rem, var(--fs20));
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+
+}
+
+.chatListContainer .chatListWrapper ul li .leftPart .detailsPart p {
+    margin: 0;
+    /* font-size: 0.9rem; */
+    font-size: max(0.8rem, var(--fs16));
+    font-family: "Nexa-Light";
+}
+
+.chatListContainer .chatListWrapper ul li .rightPart {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chatListContainer .chatListWrapper ul li .rightPart p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* font-size: 0.9rem; */
+    font-size: max(0.8rem, var(--fs15));
+    color: gray;
+}
+
+.chatListContainer .chatListWrapper ul li .rightPart p span {
+    width: 3px;
+    height: 3px;
+    background-color: #777777;
+    display: flex;
+    border-radius: 100px;
+}
+
+.chatListContainer .chatListWrapper ul li .rightPart button {
+    width: max(30px, var(--fs40));
+    background-color: transparent;
+    border: none;
+    display: flex;
+}
+
+.chatListContainer .chatListWrapper ul li .rightPart button img {
+    width: 100%;
+}
+
+@media screen and (max-width:992px) {
+    .chatListContainer {
+        height: 70%;
+    }
+}

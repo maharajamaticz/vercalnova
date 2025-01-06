@@ -1,0 +1,27 @@
+.communitySocialPage .headerPart h2{
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-align: center;
+        margin: auto;
+        text-transform: uppercase;
+}
+.communitySocialPage .settingBtn{
+    background-color: transparent;
+    border:none;
+    padding:0.5rem 0.7rem;
+    background: linear-gradient(180deg, #77777746 0%, #4545453d 100%);
+    border:1px solid #4d4d4d;
+    border-radius: 5px;
+
+}
+.communitySocialPage .settingBtn:active{
+    transform: scale(0.95);
+}
+.communitySocialPage .settingBtn img{
+    width: 25px;
+    display: flex;
+}
+.communitySocialPage .storyTitle{
+    color:#fff;
+    font-size:1.5rem;
+}

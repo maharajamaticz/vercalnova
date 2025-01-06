@@ -1,0 +1,107 @@
+.communityChatPage .chatHeaderPart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.communityChatPage .chatHeaderPart .leftPart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.communityChatPage .chatHeaderPart .leftPart .logoImg {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: 100px;
+}
+
+.communityChatPage .chatHeaderPart .leftPart .logoImg img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.communityChatPage .chatHeaderPart .leftPart .detailsPart h2{
+    color:var(--white);
+    margin: 0;
+    font-size: max(0.9rem,var(--fs17));
+    font-weight: 900;
+}
+.communityChatPage .chatHeaderPart .leftPart .detailsPart p{
+    color:var(--white);
+    margin: 0;
+    font-size: max(0.7rem,var(--fs16));
+    font-weight: 100;
+    font-family:"Nexa-Light" !important;
+}
+.communityChatPage .chatHeaderPart button{
+    font-size: max(0.7rem,var(--fs15));
+}
+
+.communityChatPage{
+    height: 100%;
+}
+.communityChatPage .chatBodyPart{
+    height: 83%;
+    overflow-y: auto;
+}
+.communityChatPage .chatBodyPart .timePart h2{
+    background: linear-gradient(180deg, #77777748 0%, #45454541 100%);
+    font-size: max(0.7rem,var(--fs13));
+    width: fit-content;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    margin: auto;
+    color:#fff;
+    border:2px solid #333333;
+}
+.communityChatPage .chatBodyPart .senderMsg{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.communityChatPage .chatBodyPart .senderMsg .contentPart{
+    background-color: #171717;
+    color:#fff;
+    padding: 0.4rem 1rem;
+    width: fit-content;
+    border-radius: 10px 2px 10px 10px;
+}
+
+.communityChatPage .chatBodyPart .contentPart p{
+    margin: 0;
+    font-size: max(0.8rem,var(--fs17)); 
+}
+.communityChatPage .chatBodyPart .receivedMsg .timeText{
+    text-align: right;
+}
+.communityChatPage .chatBodyPart .othersPart .timeText{
+    font-size: 0.7rem;
+    color:#f3f3f3;
+    padding: 0.4rem;
+    margin: 0;
+}
+.communityChatPage .chatBodyPart .receivedMsg{
+    display: flex;
+    gap:0.5rem;
+}
+.communityChatPage .chatBodyPart .receivedMsg .profileImg img{
+    width: max(40px,3vw);
+}
+.communityChatPage .chatBodyPart .receivedMsg .contentPart{
+    background-color: #232323;
+    color:#fff;
+    padding: 0.4rem 1rem;
+    width: fit-content;
+    border-radius: 2px 10px 10px 10px;
+}
+.communityChatPage .chatBodyPart .receivedMsg .profileName{
+    font-size: max(0.8rem,var(--fs13));
+    color:#fff;
+}

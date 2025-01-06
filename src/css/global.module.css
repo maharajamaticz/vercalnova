@@ -1,0 +1,828 @@
+/* audioPlayer.jsx style start*/
+.audioPlayerContainer {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.audioPlayerContainer audio {
+    display: none;
+}
+
+.audioPlayerContainer .playPauseButton {
+    padding: 0;
+    font-size: 2rem;
+    display: flex;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+}
+
+.audioPlayerContainer .playPauseButton svg {
+    padding: 0;
+}
+
+.audioPlayerContainer .timeDisplay {
+    font-size: max(0.7rem, var(--fs15));
+    width: 40px;
+    text-align: right;
+}
+
+.audioPlayerContainer .inputRange {
+    position: relative;
+    width: 100%;
+}
+
+.audioPlayerContainer .inputRange input {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.audioPlayerContainer .inputRange .svgIcon {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+}
+
+.audioPlayerContainer .inputRange .svgIcon.isActive {
+    animation: waveAnimation 1s infinite;
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: rotateX(50deg);
+    }
+
+    50% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(50deg);
+    }
+}
+
+.audioPlayerContainer .inputRange input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: #ff000000;
+}
+
+.audioPlayerContainer .inputRange input[type=range]:focus {
+    outline: none;
+}
+
+.audioPlayerContainer .inputRange input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 12.8px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.audioPlayerContainer .inputRange input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 0px;
+    border-radius: 7px;
+    /* background: #ffffff; */
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3.6px;
+    position: relative;
+    border-radius: 100px;
+}
+
+.audioPlayerContainer .inputRange input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 0px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.audioPlayerContainer .inputRange .overlay {
+    display: flex;
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    transition: all 0s;
+}
+
+/* audioPlayer.jsx style end*/
+
+/* CommunitySearch.jsx style start */
+.communitySearchConatiner {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.communitySearchConatiner .inputWrapper {
+    flex-grow: 1;
+    display: flex;
+    padding: 0rem;
+    background: linear-gradient(180deg, rgba(119, 119, 119, 0.274) 0%, rgba(69, 69, 69, 0.24) 100%);
+    border-radius: 100px;
+    border: 1px solid #ffffff1e;
+
+}
+
+.communitySearchConatiner .inputWrapper input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0.7rem 0.7rem 0.7rem 1rem;
+    color: #fff;
+    font-size: 1rem;
+
+}
+
+.communitySearchConatiner .inputWrapper button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+}
+
+.communitySearchConatiner .inputWrapper button:active {
+    transform: scale(0.95);
+}
+
+.communitySearchConatiner .inputWrapper button img {
+    width: 18px;
+    display: flex;
+}
+
+.communitySearchConatiner .settingBtn {
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    background: linear-gradient(180deg, #77777746 0%, #4545453d 100%);
+    border: 1px solid #4d4d4d;
+    border-radius: 5px;
+}
+
+.communitySearchConatiner .settingBtn.plusBtn {
+    border-radius: 100px;
+}
+
+.communitySearchConatiner .settingBtn:active {
+    transform: scale(0.95);
+}
+
+.communitySearchConatiner .settingBtn img {
+    width: max(20px, var(--fs30));
+    display: flex;
+}
+
+.filterModel {
+    width: fit-content;
+    position: fixed;
+    background-color: #151515;
+    color: #fff;
+    z-index: 100;
+    padding: 1rem;
+    border-radius: 10px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    animation: openModel 0.4s;
+}
+
+@keyframes openModel {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.filterModel .filterTitle h2 {
+    width: fit-content;
+    /* background-image: var(--blueGradient); */
+    color: transparent;
+    background-clip: text;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.filterModel .filterList {
+    margin: 1rem 0 0 0;
+}
+
+.filterModel .filterList ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filterModel .filterList ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    gap: 1rem;
+}
+
+.filterModel .filterList ul li img {
+    width: 15px;
+}
+
+/* CommunitySearch.jsx style end */
+
+/*sectionHeader.jsx start*/
+.communityHubSectionPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.communityHubSectionPart h2 {
+    font-weight: 900;
+    /* font-size: 1.2rem; */
+    font-size: max(1rem, var(--fs25));
+    /* text-transform: uppercase; */
+    text-transform: capitalize;
+}
+
+.communityHubSectionPart button {
+    position: absolute;
+    right: 0;
+    font-size: 0.9rem;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    transition: all 0.3s;
+    font-size: max(0.8rem, var(--fs17));
+}
+
+.communityHubSectionPart button:hover {
+    opacity: 0.5;
+}
+
+.communityHubSectionPart.headerType2 {
+    justify-content: flex-start;
+}
+
+.communityHubSectionPart.headerType2 h2 {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.communityHubSectionPart.headerType2 button {
+    width: fit-content;
+    background-image: var(--blueGradient);
+    color: transparent;
+    background-clip: text;
+    font-weight: 900;
+}
+
+/*sectionHeader.jsx end*/
+
+/*imageCard.jsx start*/
+.imageCardTemplate img {
+    width: 100%;
+    border-radius: 5px;
+    max-height: 220px;
+    object-fit: cover;
+}
+
+.imageCardTemplate p {
+    color: var(--white);
+    padding: 0.5rem 0.2rem;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 100%;
+}
+
+/*imageCard.jsx end*/
+
+/* channelCard.jsx start */
+.channelCardTemplate {
+    border: 1px solid #414141;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+}
+
+.channelCardTemplate .leftPart {
+    width: 30%;
+    display: flex;
+    gap: 0.3rem;
+    margin-top: 2%;
+}
+
+.channelCardTemplate .leftPart img {
+    width: 35px;
+}
+
+.channelCardTemplate .leftPart .layerOne {
+    display: flex;
+    align-items: center;
+
+}
+
+.channelCardTemplate .leftPart .layerTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.channelCardTemplate .leftPart .layerThree {
+    display: flex;
+    align-items: center;
+
+}
+
+.channelCardTemplate .leftPart .layerTwo h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+}
+
+.channelCardTemplate .rightPart {
+    width: 70%;
+}
+
+.channelCardTemplate .rightPart div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+}
+
+.channelCardTemplate .rightPart div .dollerImg {
+    width: 25px;
+}
+
+.channelCardTemplate .rightPart div h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.channelCardTemplate .rightPart .badge {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background-color: #00E717;
+    border-radius: 100px;
+}
+
+.channelCardTemplate .rightPart .statusPart {
+    display: flex;
+    align-items: center;
+}
+
+.channelCardTemplate .rightPart .statusPart p {
+    color: #fff;
+}
+
+.channelCardTemplate .rightPart p {
+    margin: 0;
+}
+
+/* channelCard.jsx end */
+
+/* readmore.jsx start*/
+.readMoreComponent p {
+    color: gray;
+    margin: 0;
+    font-size: 0.9rem;
+
+}
+
+.readMoreComponent button {
+    background-color: transparent;
+    border: none;
+    color: #E0E0E0;
+    padding: 0;
+    line-height: 100%;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #fff;
+}
+
+/* readmore.jsx end*/
+
+/* chatCard.jsx start */
+.chatCardTemplate {
+    border: 1px solid #414141;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.chatCardTemplate .headerPart {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.chatCardTemplate .headerPart h2 {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.chatCardTemplate .headerPart button {
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0;
+    border: none;
+    font-size: 0.7rem;
+}
+
+.chatCardTemplate .headerPart button img {
+    width: 11px;
+}
+
+.chatCardTemplate .bodyPart .imgCardWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    justify-content: center;
+    padding: 1rem 0 0 0;
+}
+
+.chatCardTemplate .bodyPart .imgCardWrapper img {
+    /* width: 45px; */
+    width: max(30px, var(--fs50));
+    border-radius: 100px;
+}
+
+.chatCardTemplate .footerPart {
+    text-align: center;
+    padding: 1rem 0 0 0;
+}
+
+/* chatCard.jsx end */
+
+/* chatInput.jsx start*/
+.chatInputContainer {
+    display: flex;
+    align-items: center;
+    background-color: #181818;
+    border-radius: 100px;
+    padding: 0.3rem 0.5rem;
+}
+
+.chatInputContainer .leftPart button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.chatInputContainer .leftPart button:active {
+    transform: scale(0.95);
+}
+
+.chatInputContainer .leftPart button img {
+    width: 80%;
+}
+
+.chatInputContainer .inputWrapper {
+    flex-grow: 1;
+}
+
+.chatInputContainer .inputWrapper input {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+.chatInputContainer .rightPart {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chatInputContainer .rightPart button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chatInputContainer .rightPart label {
+    cursor: pointer;
+}
+
+.chatInputContainer .rightPart label:active,
+.chatInputContainer .rightPart button:active {
+    transform: scale(0.95);
+}
+
+.chatInputContainer .rightPart img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.chatInputContainer .rightPart input[type="file"] {
+    display: none;
+}
+
+/* chatInput.jsx end*/
+
+/* chatGroundArea.jsx start*/
+.chatGroundArea {
+    height: 83%;
+    overflow-y: auto;
+}
+
+.chatGroundArea .timePart h2 {
+    background: linear-gradient(180deg, #77777748 0%, #45454541 100%);
+    font-size: max(0.7rem, var(--fs13));
+    width: fit-content;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    margin: auto;
+    color: #fff;
+    border: 2px solid #333333;
+}
+
+.chatGroundArea .senderMsg {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.chatGroundArea .senderMsg .contentPart {
+    background-color: #171717;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    width: fit-content;
+    border-radius: 10px 2px 10px 10px;
+}
+
+.chatGroundArea .contentPart p {
+    margin: 0;
+    font-size: max(0.8rem, var(--fs17));
+}
+
+.chatGroundArea .receivedMsg .timeText {
+    text-align: right;
+}
+
+.chatGroundArea .othersPart .timeText {
+    font-size: 0.7rem;
+    color: #f3f3f3;
+    padding: 0.4rem;
+    margin: 0;
+}
+
+.chatGroundArea .receivedMsg {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chatGroundArea .receivedMsg .profileImg img {
+    width: max(40px, 3vw);
+}
+
+.chatGroundArea .receivedMsg .contentPart {
+    background-color: #232323;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    width: fit-content;
+    border-radius: 2px 10px 10px 10px;
+}
+
+.chatGroundArea .receivedMsg .profileName {
+    font-size: max(0.8rem, var(--fs13));
+    color: #fff;
+}
+
+/* chatGroundArea.jsx end*/
+
+/* categoryFilterList.jsx start*/
+.catagoriesFilterList .catagoriesFilterSwiperSider {
+    width: 100%;
+}
+
+.catagoriesFilterList ul {
+    width: 100%;
+    display: flex;
+    color: #fff;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.catagoriesFilterList ul .catagoriesFilterSwiperSlide {
+    width: 100px;
+}
+
+.catagoriesFilterList ul li {
+
+    border: 1px solid;
+    padding: 0.3rem 1.2vw;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-size: max(0.8rem, var(--fs15));
+    transition: all 0.3s;
+    user-select: none;
+}
+
+.catagoriesFilterList ul li:hover {
+    opacity: 1 !important;
+}
+
+/* chatGroundArea.jsx end*/
+
+/* organizationCard.jsx start*/
+.organizationCard {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.organizationCard .leftPart {
+    width: 15%;
+}
+
+.organizationCard .leftPart img {
+    width: 100%;
+}
+
+.organizationCard .rightPart {
+    flex-grow: 1;
+    border: 2px solid #414141;
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.organizationCard .rightPart p {
+    color: var(--white);
+    font-size: max(0.7rem, var(--fs18));
+    margin: 0;
+}
+
+/* organizationCard.jsx end*/
+
+/* storyModel.jsx start*/
+.storyModel {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     /* From https://css.glass */
+     background: rgba(0, 0, 0, 0.8);
+     border-radius: 16px;
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(7.2px);
+     -webkit-backdrop-filter: blur(7.2px);
+}
+
+.storyModel .modelCloseBtn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.storyModel .storiesComponent {
+    width: 500px;
+    height: 100vh;
+}
+
+.storyModel .storiesComponent .storiesSwiper {
+    width: 100%;
+    height: 100%;
+}
+.storyModel .storiesComponent .storyHeader{
+    color:var(--white);
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    
+}
+.storyModel .storiesComponent .storyHeader .imgPart{
+    width: 50px;
+}
+.storyModel .storiesComponent .storyHeader .imgPart img{
+    width: 100%;
+}
+.storyModel .storiesComponent .storyHeader .detailsPart h2{
+    font-size: 0.9rem;
+    margin: 0;
+}
+.storyModel .storiesComponent .storyHeader .detailsPart p{
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.storyPlayerContainer{
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 9999;
+}
+
+.storyPlayerContainer .customButtons{
+    color:#fff;
+    position: absolute;
+    top:50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+
+}
+.storyPlayerContainer .customButtons button{
+    cursor: pointer;
+    border:none;
+    color:#fff;
+    font-size: 3rem;
+    background-color: transparent;
+    display: flex;
+}
+
+.storyPlayerContainer .storyInputWrapper{
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    z-index: 999;
+}
+
+/* .storyPlayerContainer .videoContainer{
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    
+}
+.storyPlayerContainer .videoContainer video,
+.storyPlayerContainer .videoContainer img{
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+}
+.storyPlayerContainer  .swiperVideoSlider { 
+    height: 90%;
+}
+.storyPlayerContainer  .swiperVideoSlider .swiperSlideVideoSlider{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}  */
+
+/* storyModel.jsx end*/
+
+/* media qurey */
+@media screen and (max-width:575px) {
+
+    /* channelCard.jsx start */
+    .channelCardTemplate {
+        flex-direction: column;
+    }
+
+    .channelCardTemplate .leftPart {
+        width: 100%;
+    }
+
+    .channelCardTemplate .rightPart {
+        width: 100%;
+    }
+
+    /* channelCard.jsx end */
+}

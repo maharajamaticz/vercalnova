@@ -1,0 +1,72 @@
+/* reelVideo.module.css */
+.reelsWrapper {
+    height: 90vh;
+    margin: 1vw;
+    overflow: hidden;
+}
+
+.mySwiper {
+    height: 100%;
+}
+
+.sliderCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    margin: auto;
+    font-size: 24px;
+    position: relative;
+}
+.sliderCard video{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sliderCard .reelsOptionPart{
+    position: absolute;
+    top:50%;
+    right:0%;
+    transform: translateY(-50%);
+    z-index: 99;
+
+}
+.sliderCard .reelsOptionPart ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap:2rem;
+}
+
+.sliderCard .reelsOptionPart ul li button{
+    background-color: transparent;
+    color:#fff;
+    border:none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sliderCard .reelsOptionPart ul li button img{
+    width: 25px;
+}
+
+.sliderCard .reelsOptionPart ul li button p{
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+}
+
+
+@media screen and (max-width:992px) {
+    .reelsWrapper {
+        height: 85vh;
+    }
+    
+}

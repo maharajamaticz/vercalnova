@@ -1,0 +1,86 @@
+.communityTabsPage {
+    height: 100%;
+}
+
+.communityTabsPage .chatArea {
+    height: 30%;
+}
+
+.communityTabsPage > .headerPart h2 {
+    font-size: max(1rem,var(--fs20));
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.communityTabsPage .taskTemplatePart ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0;
+}
+.communityTabsPage .taskTemplatePart .headerPart h2{
+    color:#fff;
+    font-size: 1.1rem;
+}
+
+.communityTabsPage .taskTemplatePart ul .taskList {
+    color: #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #414141;
+}
+
+.communityTabsPage .taskTemplatePart ul .taskList label {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.9rem;
+}
+
+.communityTabsPage .taskTemplatePart ul .taskList input {
+    display: none;
+}
+
+.communityTabsPage .taskTemplatePart ul .taskList:has(input:checked) {
+    background-color: #1770BB;
+    border-color: transparent;
+}
+
+.communityTabsPage .taskTemplatePart ul li .plusBtn {
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    background: linear-gradient(298.25deg, #156DBA 18.92%, #3DACD2 83.11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.communityTabsPage .taskTemplatePart ul li .plusBtn img {
+    width: 60%;
+}
+
+.communityTabsPage .taskTemplatePart .customBtn button {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    line-height: 100%;
+    padding: 0;
+}
+
+.communityTabsPage .taskTemplatePart .postBtn {
+    display: block;
+    color: #000;
+    background: linear-gradient(298.25deg, #156DBA 18.92%, #3DACD2 83.11%);
+    padding: 0.5rem 2rem;
+    font-weight: 900;
+    border-radius: 5px;
+    border: none;
+    margin: 3rem auto 0 auto;
+}

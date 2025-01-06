@@ -1,0 +1,51 @@
+.sidebar {
+    background: var(--black);
+    height: 100%;
+}
+
+.sidelogo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.sidebartab {
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.sidebartab a {
+    color: var(--white) !important;
+    font-family: "Nexa-Light" !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+}
+
+.sidebartab a img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.sidebarLink {}
+
+.activeLink {
+    font-family: "Nexa-Regular" !important;
+    color: #fff !important;
+    font-weight: 900;
+    background-color: #1a1a1afd;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:992px) {
+    .sidelogo {
+        display: none;
+    }
+
+    .sidebar {
+        padding-top: 4.5rem;
+    }
+}

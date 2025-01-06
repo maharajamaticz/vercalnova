@@ -1,0 +1,146 @@
+.allback{
+    background: url("../Assets/Landing/landingback.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* overflow: hidden; */
+    overflow-y: auto;
+}
+.allback::-webkit-scrollbar-track, .follow_hset::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+.allback::-webkit-scrollbar, .follow_hset::-webkit-scrollbar-track
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+.allback::-webkit-scrollbar-thumb, .follow_hset::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: var(--editbtn);
+}
+.follow_hset{
+    max-height: 60vh;
+    overflow-y: auto;
+}
+.signup{
+    border: 2px solid #2b2229;
+    border-radius: 18px;
+    width: 500px;
+    box-shadow: 0px 4px 5.7px -1px #FFFFFF40 inset;
+    margin-left: auto;
+}
+.main_heading{
+    background: var(--gradient_text);
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: #0000;
+    font-weight: 800;
+}
+.coverimg{
+    width: 100%;
+   height: 170px;
+   object-fit: cover;
+   border-radius: 20px;
+   margin-top: -30px;
+}
+.profile{
+    width: 100px;
+    display: flex;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin: auto;
+    margin-top: -80px;
+}
+.browseinput{
+    position: relative;
+    z-index: 0;
+}
+.wset{
+    width: 100px;
+    margin: auto;
+}
+.browseinput input{
+    opacity: 0;
+    width: 100%;
+}
+.browseinput button{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    z-index: -1;
+}
+.editbtn{
+    background-color: var(--editbtn);
+    border: 1px solid var(--editbtn);
+    font-weight: 500;
+    border-radius: 20px;
+}
+.addedbtn{
+    background: var(--addedbtn);
+    border: 1px solid transparent;
+    font-weight: 600;
+    border-radius: 25px;
+    font-size: 18px;
+}
+.plus{
+    font-weight: 600;
+    border-radius: 25px;
+    font-size: 18px;
+    z-index: 2;
+}
+.plusnormalbtn{
+    background: var(--white);
+    border: 1px solid transparent;
+}
+.plusactivebtn, .followbtn{
+    background: var(--editbtn);
+    border: 1px solid transparent;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+.plusactivebtn::after{
+    content: "";
+    position: absolute;
+    background: url("../Assets/Landing/king.png") no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    width: 21px;
+    height: 21px;
+    top: -10px;
+    left: 12px;
+}
+.followericon {
+    width: max(35px,3.5vw);
+    height:max(35px,3.5vw);
+    object-fit: cover;
+    border-radius: 50px;
+}
+.suggestionPart .userName{
+    font-size: max(0.7rem,var(--fs18));
+}
+.suggestionPart .followbtn{
+    font-size: max(0.7rem,var(--fs18));
+}
+
+@media screen and (max-width:991px) {
+    .allback{
+      height: auto;
+    }
+    .signup{
+        margin-left: unset;
+        margin: auto !important;
+    }
+  }
+@media screen and (max-width:480px) {
+    .signup{
+     width: 330px;
+    }
+  }

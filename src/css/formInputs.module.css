@@ -1,0 +1,146 @@
+/* inputs start*/
+.inputsContainer {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.inputsContainer .inputWrapper {
+    width: 100%;
+    display: flex;
+}
+
+.inputsContainer .inputLabel {
+    color:#fff;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    padding: 0 0.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.inputsContainer .copyBtn {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    color: #156DBA;
+    font-size: 1.5rem;
+}
+
+.inputsContainer .copyBtn:hover {
+    opacity: 0.5;
+}
+
+.inputsContainer .copyBtn svg {
+    display: flex;
+}
+
+.inputsContainer .copyBtn img {
+    width: 20px;
+    display: flex;
+}
+
+.inputsContainer .inputWrapper input.copyInput {
+    padding-right: 3rem;
+    color: #00BEFF;
+    font-weight: 900;
+}
+
+.inputsContainer .inputWrapper input,
+.inputsContainer .inputWrapper textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #5e5e5e;
+    padding: 0.7rem;
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.inputsContainer .inputWrapper textarea {
+    resize: vertical;
+    max-height: 200px;
+    min-height: 100px;
+}
+
+.inputsContainer .inputWrapper input:focus,
+.inputsContainer .inputWrapper textarea:focus {
+    /* border-color: #156DBA; */
+    border-color: #fff;
+}
+
+.inputsContainer .inputWrapper input::placeholder,
+.inputsContainer .inputWrapper textarea::placeholder {
+    color: #3b3b3b;
+    text-transform: capitalize;
+}
+
+.inputsContainer .inputWrapper .reactSelectContainer{
+    width: 100%;
+}
+
+.inputsContainer .errorText {
+    position: absolute;
+    top: 100%;
+    left: 1%;
+    font-size: 0.8rem;
+    color: #ff0000;
+}
+
+.fileUploadInputComponent .fileInputWrapper {
+    border: 1px solid #5e5e5e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.fileUploadInputComponent .fileInputWrapper input {
+    display: none;
+}
+
+.fileUploadInputComponent .fileInputWrapper>label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.fileUploadInputComponent .fileInputWrapper .imgBox {
+    width: 35px;
+    height: 30px;
+    border-radius: 5px;
+    background: linear-gradient(298.25deg, #156DBA 18.92%, #3DACD2 83.11%);
+}
+
+.fileUploadInputComponent .fileInputWrapper .imgBox.bannerUploadInput {
+    width: 60px;
+}
+
+.fileUploadInputComponent .fileInputWrapper .imgBox.profileUploadInput {
+    width: 35px;
+}
+
+.fileUploadInputComponent .fileInputWrapper>label p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.fileUploadInputComponent .fileInputWrapper button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+}
+
+.fileUploadInputComponent .fileInputWrapper button:hover {
+    opacity: 0.5;
+}
+
+.fileUploadInputComponent .fileInputWrapper button img {
+    width: 15px;
+
+}
+/* inputs end*/

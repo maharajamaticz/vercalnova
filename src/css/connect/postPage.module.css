@@ -1,0 +1,330 @@
+.postPage .headPart {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postPage .headPart button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    padding: 0 0.5rem;
+    transition: all 0.3s;
+}
+
+.postPage .headPart button img {
+    width: 6px;
+}
+
+.postPage .headPart button:hover {
+    transform: scale(0.9);
+}
+
+.postPage>.headPart>h2 {
+    width: fit-content;
+    /* font-size: 1.5rem; */
+    font-size: max(1rem, var(--fs30));
+    background-image: var(--notifiback);
+    color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.userNotFound {
+    color: var(--white);
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* postCardTemplate */
+.postCardTemplate {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.postCardTemplate .imgPart {
+    width: 100%;
+    height: 18rem;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.postCardTemplate .imgPart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.postCardTemplate .optionPart {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+}
+
+.postCardTemplate .optionPart .leftPart ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.postCardTemplate .optionPart .leftPart ul li{
+    width: fit-content;
+}
+.postCardTemplate .optionPart .leftPart ul li button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.postCardTemplate .optionPart .leftPart ul li button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: all 0.3s;
+}
+
+.postCardTemplate .optionPart .leftPart ul li button:hover img {
+    transform: scale(1.2);
+}
+
+.postCardTemplate .optionPart .leftPart ul li button span {
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+.postCardTemplate .optionPart .rightPart input{
+    display: none;
+}
+
+.postCardTemplate .optionPart .rightPart label {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.postCardTemplate .optionPart .rightPart label img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+    transition: all 0.3s;
+}
+
+.postCardTemplate .optionPart .rightPart input:checked + label .unSavedIcon  {
+    display: none;
+}
+.postCardTemplate .optionPart .rightPart input:not(:checked) + label .savedIcon  {
+    display: none;
+}
+.postCardTemplate .detailPart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postCardTemplate .detailPart h2 {
+    font-size: 1.1rem;
+    font-size: max(0.9rem,1vw);
+    color: var(--white);
+}
+
+.postCardTemplate .detailPart button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+}
+
+.postCardTemplate .detailPart button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.postCardTemplate .detailPart button span {
+    font-size: 0.8rem;
+}
+
+.postCardTemplate .commentContainer {
+    padding: 1rem 0 0 0;
+}
+
+
+.postCardTemplate .commentContainer .headPart h2 {
+    color: var(--white);
+    font-size: max(1rem,1vw);
+}
+
+.postCardTemplate .commentContainer .bodyPart {
+    max-height: 20rem;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.postCardTemplate .commentContainer .inputPart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #151515;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+}
+
+.postCardTemplate .commentContainer .inputPart button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.postCardTemplate .commentContainer .inputPart button img {
+    width: 20px;
+}
+
+.postCardTemplate .commentContainer .inputPart button.camaraBtn img {
+    width: 25px;
+}
+
+.postCardTemplate .commentContainer .inputWrapper {
+    border: 1px solid #333335;
+    width: 100%;
+    display: flex;
+    padding: 0 0 0 0.5rem;
+    border-radius: 100px;
+}
+
+.postCardTemplate .commentContainer .inputWrapper input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    color: var(--white);
+}
+
+.postCardTemplate .commentContainer .inputWrapper .postBtn {
+    background: linear-gradient(298.25deg, #156DBA 18.92%, #3DACD2 83.11%);
+    padding: 0.3rem 1rem;
+    border-radius: 0 100px 100px 0;
+    font-weight: 500;
+
+}
+
+/* comment template */
+
+.commentTemplate .commentCard {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.commentTemplate .commentCard .userImgPart img {
+    /* width: 3.5rem; */
+    width: max(2.5rem, var(--fs60));
+    height: auto;
+}
+
+.commentTemplate .commentCard .bodyPart .msgContent {
+    width: 100%;
+    background-color: #151515;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.commentTemplate .commentCard .bodyPart .msgContent h2 {
+    font-size: max(1rem, var(--fs18));
+}
+
+.commentTemplate .commentCard .bodyPart .msgContent p {
+    font-size: max(0.9rem, var(--fs15));
+    color: #E0E0E0;
+    font-family: "Nexa-Light";
+    margin: 0;
+}
+
+.commentTemplate .commentCard .bodyPart .msgContent p button {
+    font-size: max(0.9rem, var(--fs15));
+}
+
+.commentTemplate .commentCard .bodyPart .commentOption {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.commentTemplate .commentCard .bodyPart .commentOption button {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-size: max(0.8rem, var(--fs14));
+    text-transform: capitalize;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.commentTemplate .commentCard .bodyPart .commentOption button span {
+    display: flex;
+    align-items: center;
+}
+
+.commentTemplate .commentCard .bodyPart .commentOption button img {
+    width: 18px;
+    display: flex;
+    margin: 0 0 0.3rem 0;
+}
+
+.commentTemplate .commentCard .bodyPart .moreReply button {
+    margin: 0;
+    color: var(--white);
+    padding: 0.7rem 4rem;
+    font-size: max(0.7rem, var(--fs15));
+    background-color: transparent;
+    border: none;
+}
+
+.commentTemplate .commentCard .bodyPart .moreReply {
+    position: relative;
+}
+
+.commentTemplate .commentCard .bodyPart .moreReply::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    width: 40px;
+    height: 50%;
+    border: 1px solid gray;
+    border-top: none;
+    border-right: none;
+}
+
+.commentTemplate.nestedReply {
+    position: relative;
+}
+
+.commentTemplate.nestedReply::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 1.7rem;
+    width: 1px;
+    height: 60%;
+    background-color: gray;
+    z-index: -1;
+}

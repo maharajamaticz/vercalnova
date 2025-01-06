@@ -1,0 +1,41 @@
+.notificationPage{
+    padding: 0.5rem 0;
+}
+.notificationPage .headPart{
+    margin-bottom: 1rem;
+}
+.notificationPage .bodyPart{
+    margin: 2rem 0;
+}
+.notificationPage .headPart h3{
+    background-image: var(--notifiback);
+    color: transparent;
+    background-clip: text;
+    font-size: 1.2rem;
+}
+.notificationPage .bodyPart ul{
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color:var(--white);
+}
+.notificationPage .bodyPart ul li{
+    border-bottom:1px solid #242424;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.notificationPage .bodyPart ul li:hover{
+    transform: translateX(5px);
+}
+.notificationPage .bodyPart ul li .mainTitle{
+    font-size: max(1rem,1.1vw);
+}
+.notificationPage .bodyPart ul li .subTitle{
+    font-size: max(0.8rem,1vw);
+}
+.notificationPage .bodyPart ul li p{
+    font-family: "Nexa-Light";
+    font-size: 0.9rem;
+}

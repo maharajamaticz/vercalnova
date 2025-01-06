@@ -1,0 +1,167 @@
+.discoverCreatorPage .headerPart h2 {
+    width: fit-content;
+    margin: auto;
+    font-size: max(1.3rem, var(--fs25));
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+}
+
+.creatorHubPage .pageTitlePart h2 {
+    font-size: max(1rem, var(--fs30));
+    text-align: center;
+    font-weight: 900;
+    margin: 1rem auto;
+    text-transform: uppercase;
+}
+
+.exclusiveContentPage .pageTitle {
+    margin-bottom: 1rem;
+}
+
+.exclusiveContentPage .pageTitle h2 {
+    width: 100%;
+    text-align: center;
+    font-size: max(1rem, var(--fs25));
+    font-weight: 900;
+}
+
+.tabCardWrapper .cardPart {
+    background: var(--pageTheme3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 208px;
+    margin: 0.5rem 0;
+    padding: 2rem 2vw;
+    gap: 1rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.tabCardWrapper .cardPart:hover {
+    transform: scale(1.03);
+}
+
+.tabCardWrapper .cardPart .imgWrapper {
+    width: 70px;
+    height: 70px;
+}
+
+.tabCardWrapper .cardPart img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tabCardWrapper .cardPart h2 {
+    font-size: max(1rem, var(--fs20));
+    text-align: center;
+    font-weight: 900;
+    margin: auto;
+}
+
+.discoverOrgSections {
+    margin: 1rem 0;
+}
+
+.discoverOrgSections .discoverOrgTitlePart h2 {
+    text-transform: capitalize;
+    color: var(--white);
+    font-size: max(1rem, var(--fs23));
+    font-weight: 900;
+}
+
+.discoverOrgSections .discoverOrgListWrapper ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.discoverOrgSections .discoverOrgListWrapper ul .discoverOrgCard {
+    display: flex;
+    gap:1rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: #151515;
+    padding: 1rem;  
+
+}
+.discoverOrgSections .discoverOrgListWrapper ul .discoverOrgCard .imgPart {
+    width: 25%;
+}
+
+.discoverOrgSections .discoverOrgListWrapper ul .discoverOrgCard .imgPart img{
+    width: 100%;
+}
+
+.discoverOrgSections .discoverOrgListWrapper ul .discoverOrgCard .detailsPart {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    align-items: flex-start;
+}
+
+.discoverOrgSections .discoverOrgListWrapper ul .discoverOrgCard .detailsPart h2{
+    color:var(--white);
+    font-size: max(1.1rem,var(--fs20));
+    margin: 0;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.findPartnershipPage {
+    position: relative;
+    height: 100%;
+}
+.findPartnershipPage .pageTitle h2{
+    width: 100%;
+    text-align: center;
+    font-size: max(1rem, var(--fs25));
+    font-weight: 900;
+}
+.findPartnershipPage .btnWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.findPartnershipPage .btnWrapper button{
+    width: 25%;
+    padding: 0.8rem !important;
+    font-weight: 900;
+}
+.findPartnershipPage .addCreatorBtn{
+    position: absolute;
+    bottom:20%;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.findPartnershipPage .addCreatorBtn img{
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width:992px) {
+    .discoverOrgSections .discoverOrgListWrapper ul .discoverOrgCard {
+        flex-direction: column;
+    }
+    .discoverOrgSections .discoverOrgListWrapper ul .discoverOrgCard .imgPart {
+        width: 30%;
+        min-width: 5rem;
+        margin: auto;
+    }
+    
+    .discoverOrgSections .discoverOrgListWrapper ul .discoverOrgCard .detailsPart {
+        width: 100%;
+    }
+}

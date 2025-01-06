@@ -1,0 +1,235 @@
+.communityChannelPage {
+    padding-bottom: 1rem;
+}
+
+.communityChannelPage .topPart .bannerPart {
+    width: 100%;
+    height: 270px;
+    position: relative;
+}
+
+.communityChannelPage .topPart .bannerPart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.communityChannelPage .topPart .bannerPart button {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+}
+
+.communityChannelPage .topPart .detailsPart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--white);
+    transform: translateY(-50px);
+}
+.communityChannelPage .topPart .detailsPart .ImgComponentPart{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    background-color: #000;
+}
+.communityChannelPage .topPart .detailsPart .ImgComponentPart img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.communityChannelPage .topPart .detailsPart h2,
+.communityChannelPage .topPart .detailsPart p {
+    margin: 0;
+}
+
+.communityChannelPage .topPart .detailsPart h2 {
+    font-size: 1.5rem;
+}
+
+.communityChannelPage .topPart .detailsPart p {
+    font-family: "Nexa-Light";
+    font-size: 0.9rem;
+}
+
+.communityChannelPage .topPart .detailsPart .imgPart {
+    width: 80px;
+    height: 80px;
+    background-color: #000;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.communityChannelPage .topPart .detailsPart .imgPart img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.communityChannelPage .topPart .btnWrapper {
+    display: flex;
+    align-content: center;
+    gap: 1rem;
+}
+
+.communityChannelPage .topPart .btnWrapper button {
+    width: 50%;
+    border: 1px solid #313131;
+    background-color: #00000080;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--white);
+    padding: 2rem;
+
+}
+
+.communityChannelPage .topPart .btnWrapper button img {
+    width: 30px;
+}
+
+.communityChannelPage .topPart .btnWrapper button p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.communityChannelPage .cardWrapper {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.communityChannelPage .cardWrapper p {
+    margin: 0;
+}
+
+.communityChannelPage .descriptionPart p {
+    font-family: "Nexa-Light";
+    font-size: 1rem;
+}
+
+.communityChannelPage .optionsPart ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.communityChannelPage .optionsPart ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.communityChannelPage .optionsPart ul li div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.communityChannelPage .optionsPart ul li div img {
+    width: 20px;
+}
+
+.communityChannelPage .optionsPart ul li div .arrowIcon {
+    display: flex;
+    background-color: transparent;
+    border: none;
+}
+
+.communityChannelPage .optionsPart ul li div .arrowIcon img {
+    width: 7px;
+}
+
+.communityChannelPage .memberListContainer .headerPart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.communityChannelPage .memberListContainer .headerPart h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 900;
+}
+
+.communityChannelPage .memberListContainer .headerPart button {
+    background-color: #181818;
+    border: none;
+    padding: 0.5rem;
+    display: flex;
+    border-radius: 100px;
+
+}
+
+.communityChannelPage .memberListContainer .headerPart button img {
+    width: 20px;
+}
+
+.communityChannelPage .memberListContainer .memberList ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.communityChannelPage .memberListContainer .memberList ul li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom:1px solid #3c3c3ca9;
+}
+.communityChannelPage .memberListContainer .memberList ul li .seeAllBtn{
+    font-weight: 900;
+}
+
+.communityChannelPage .memberListContainer .memberList ul li:last-child{
+    border-bottom:1px solid transparent;
+}
+
+.communityChannelPage .memberListContainer .memberList ul li div {
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.communityChannelPage .memberListContainer .memberList ul li div img{
+    width: 40px;
+}
+
+.communityChannelPage .memberListContainer .memberList ul li div button{
+    background-color: transparent;
+    border:none;
+}
+
+.communityChannelPage .memberListContainer .memberList ul li div button img{
+    width: 8px;
+}
+
+/* media qurey */
+@media screen and (max-width:575px) {
+
+    .communityChannelPage .topPart .btnWrapper {
+        flex-direction: column;
+    }
+    .communityChannelPage .topPart .btnWrapper button {
+        width: 100%;
+    }
+    
+}

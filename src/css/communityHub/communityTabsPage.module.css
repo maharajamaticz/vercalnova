@@ -1,0 +1,45 @@
+.communityTabsPage .headerPart h2 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+}
+.communityTabsPage .cardWrapper{
+    gap:1rem;
+    margin-top: 2rem;
+}
+.communityTabsPage .cardWrapper .cardPart{
+    width: calc(100% / 2 - 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(298.25deg, #156DBA 18.92%, #3DACD2 83.11%);
+    padding: 3rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.communityTabsPage .cardWrapper .cardPart:hover{
+    transform: scale(0.98);
+}
+.communityTabsPage .cardWrapper .cardPart img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.communityTabsPage .cardWrapper .cardPart h2{
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: 900;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* media qurey */
+@media screen and (max-width:575px) {
+    .communityTabsPage .cardWrapper .cardPart{
+        width: 100%;
+    }
+}

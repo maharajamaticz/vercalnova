@@ -1,0 +1,87 @@
+.savedAndLikeContainer .saveContainer {
+    margin-top: 2rem;
+}
+
+.savedAndLikeContainer .saveContainer .titlePart {
+    display: flex;
+    justify-content: space-between;
+}
+.savedAndLikeContainer .saveContainer .titlePart h2 {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.savedAndLikeContainer .saveContainer .titlePart p {
+    font-size: 0.8rem;
+    background-image: var(--notifiback);
+    color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+.savedAndLikeContainer .saveContainer .titlePart .listBtn{
+    background-color: #99999920;
+    color:#fff;
+    border:2px solid #454545A1;
+    border-radius: 2px;
+    padding: 0.3rem 1.5rem;
+    text-transform: capitalize;
+}
+
+
+.savedAndLikeContainer .saveContainer .imgContainer ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.savedAndLikeContainer .saveContainer .imgContainer ul li {
+    width: calc(100% / 3 - 0.5rem);
+}
+
+.savedAndLikeContainer .saveContainer .imgContainer ul li img {
+    width: 100%;
+    height: max(8rem, 8vw);
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.savedAndLikeContainer .saveContainer .imgContainer ul li h3 {
+    color: #fff;
+    font-size: max(0.7rem, 0.8vw);
+    margin-top: 0.5rem;
+}
+
+.savedAndLikeContainer .saveContainer .btnWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.savedAndLikeContainer .saveContainer .btnWrapper button {
+    width: 10rem;
+}
+
+@media screen and (max-width:500px) {
+    .savedAndLikeContainer .saveContainer .imgContainer ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .savedAndLikeContainer .saveContainer .imgContainer ul li {
+        width: calc(90% / 1 - 0.5rem);
+    }
+
+    .savedAndLikeContainer .saveContainer .imgContainer ul li img {
+        width: 100%;
+        height: auto;
+    }
+
+    .savedAndLikeContainer .saveContainer .imgContainer ul li h3 {
+        font-size: 0.9rem;
+    }
+}

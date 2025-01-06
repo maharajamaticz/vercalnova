@@ -1,0 +1,178 @@
+.notification {
+    background: var(--notifiback);
+    color: var(--black);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.notification:hover {
+    transform: scale(0.97);
+}
+
+.not1 {
+    height: 180px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.not2 {
+    height: 80px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createimg {
+    height: 160px;
+    min-height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.notfi_img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.notfi_icon {
+    background: #45C7BF;
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    position: absolute;
+    right: -2px;
+    top: -8px;
+    font-size: max(0.8rem, 0.8vw) !important;
+    margin: 0;
+    padding-top: 0.3rem;
+    line-height: 100%;
+
+}
+
+.notification h5 {
+    font-size: max(1rem, 1vw);
+    margin: 0;
+    padding-top: 0.3rem;
+    line-height: 100%;
+}
+
+.btnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.storiesWrapper {
+    width: 100%;
+}
+.storySwiperSlider{
+    width: 90px;
+}
+.storiesWrapper .sliderCard {
+    width: fit-content;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.storiesWrapper .sliderCard .addBtn {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    background-color: transparent;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    font-size: 0.9rem;
+    border-radius: 100px;
+    background-color: #1770BB;
+    border: none;
+    transition: all 0.2s;
+}
+.storiesWrapper .sliderCard .addBtn:hover{
+    transform: scale(1.1);
+}
+
+.followingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.followingContainer .settingBtn {
+    background-color: transparent;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    cursor: pointer;
+    border: 1px solid;
+    border: 1px solid #99999980;
+    border-radius: 5px;
+}
+
+.followingContainer .settingBtn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.connectFooter {
+    padding: 2rem 0;
+}
+
+.connectFooter ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+}
+
+.connectFooter ul li.copyRightText {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: var(--white);
+    font-size: max(0.7rem,var(--fs15));
+}
+
+.connectFooter ul li a {
+    color: var(--white);
+    font-size: 0.9rem;
+    font-size: max(0.7rem,var(--fs15));
+    transition: all 0.3s;
+    display: flex;
+    /* padding: 0.1rem; */
+}
+
+.connectFooter ul li a:hover {
+    opacity: 0.5;
+}
+
+@media screen and (max-width:992px) {
+    .createimg {
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width:575px) {
+    .myCreatorWrapper .createimg {
+        height: max(8rem, 40vw);
+        min-height: auto;
+    }
+} */

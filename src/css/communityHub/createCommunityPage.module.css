@@ -1,0 +1,79 @@
+.createCommunityPage .headerPart h2 {
+    width: fit-content;
+    margin: auto;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.createCommunityPage .formContainer {
+    color: var(--white);
+}
+
+.createCommunityPage .formContainer .chooseTypeContainer {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0.5rem;
+}
+
+.createCommunityPage .formContainer .chooseTypeContainer>div {
+    width: 50%;
+}
+
+.createCommunityPage .formContainer .chooseTypeContainer label {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 900;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    outline: 3px solid #156DBA;
+    background-color: #1C1C1C;
+    user-select: none;
+}
+
+.createCommunityPage .formContainer .chooseTypeContainer label span {
+    background-image: var(--blueGradient);
+    color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.createCommunityPage .formContainer .chooseTypeContainer input {
+    display: none;
+}
+
+.createCommunityPage .formContainer .chooseTypeContainer input:checked~label {
+    background: linear-gradient(298.25deg, #156DBA 18.92%, #3DACD2 83.11%);
+    outline-color: transparent;
+}
+
+.createCommunityPage .formContainer .chooseTypeContainer input:checked~label span {
+    color: #000;
+}
+
+.createCommunityPage .formContainer .btnWrapper button {
+    width: 100%;
+    padding: 0.8rem;
+    color: #000;
+    font-weight: 900;
+    font-size: 1rem;
+    background: linear-gradient(298.25deg, #156DBA 18.92%, #3DACD2 83.11%);
+    border-radius: 8px;
+    border: none;
+
+}
+
+
+
+@media screen and (max-width:575px) {
+    .createCommunityPage .formContainer .chooseTypeContainer {
+        flex-direction: column;
+    }
+    .createCommunityPage .formContainer .chooseTypeContainer>div {
+        width: 100%;
+    }
+}
