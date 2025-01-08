@@ -9,7 +9,7 @@ const nextConfig = {
       },
     ];
   },
-  distDir: 'build',
+  // distDir: 'build',
   // reactStrictMode: true,
   // distDir: 'dist',
   // output: 'export'
