@@ -80,10 +80,6 @@ export default function ReelVideo() {
                 slidesPerView={1}
                 spaceBetween={0}
                 mousewheel={true}
-                // pagination={{
-                //     clickable: true,
-                // }}
-                // modules={[Mousewheel, Pagination]}
                 modules={[Mousewheel]}
                 className={styles.mySwiper}
                 onSlideChange={handleSlideChange}
