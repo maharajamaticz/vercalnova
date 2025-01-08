@@ -35,6 +35,7 @@ const stories = [
         ],
     },
 ];
+
 export default function StoryModel({ onCloseHandle }) {
     return (
         <section className={styles.storyModel}>
