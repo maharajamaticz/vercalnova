@@ -1,20 +1,20 @@
 @font-face {
   font-family: "Nexa-Light";
-  src:url("../Assets/Fonts/NexaLight.otf");
+  src: url("/assets/fonts/NexaLight.otf");
 }
 
 @font-face {
   font-family: "Nexa-Regular";
-  src: url("../Assets/Fonts/nexaRegular.ttf");
+  src: url("/assets/fonts/nexaRegular.ttf");
 }
 
 @font-face {
   font-family: "Nexa-Heavy";
-  src:url("../Assets/Fonts/NexaBold.otf");
+  src: url("/assets/fonts/NexaBold.otf");
 }
 
 :root {
-  
+
   --white: #fff;
   --black: #000;
   --editbtn: #CE97E7;
@@ -25,7 +25,7 @@
   --addedbtn: linear-gradient(298.25deg, #CE97E7 18.92%, #DA6EB1 47.48%, #A4C7D9 83.11%);
   --notifiback: linear-gradient(298.25deg, #F0DC61 14.89%, #12C1DB 82.52%);
   --blueGradient: linear-gradient(298.25deg, #156DBA 18.92%, #3DACD2 83.11%);
-  --pageTheme3:linear-gradient(298.52deg, #FC66C5 15.61%, #6F88FF 80.59%);
+  --pageTheme3: linear-gradient(298.52deg, #FC66C5 15.61%, #6F88FF 80.59%);
   --pageTheme4: linear-gradient(262.11deg, #FF3131 0.54%, #FF914D 99.33%);
 
 
@@ -107,8 +107,6 @@
   outline: none;
   list-style-type: none !important;
   text-decoration: none !important;
-  /* letter-spacing: 1px; */
-  
 }
 
 *::-webkit-scrollbar {
@@ -125,7 +123,7 @@
 }
 
 
-img{
+img {
   height: auto;
   display: flex;
 }
@@ -158,7 +156,7 @@ body::-webkit-scrollbar-thumb {
 body {
   margin: 0;
   font-family: "Nexa-Regular";
-  background: url("../Assets/Landing/landingback.png") no-repeat  !important;
+  background: url("../../public/assets/images/Landing/landingback.png") no-repeat !important;
   background-size: cover !important;
   width: 100%;
 }
@@ -186,6 +184,7 @@ body {
   background-clip: text;
   margin: 0;
 }
+
 .text-orange-gradient {
   width: fit-content;
   background-image: var(--pageTheme4);
@@ -201,7 +200,7 @@ body {
   line-height: 100%;
   border: none;
   border-radius: 5px;
-  font-size: max(0.8rem,var(--fs15));
+  font-size: max(0.8rem, var(--fs15));
 }
 
 .blueRoundBtn {
@@ -223,8 +222,9 @@ body {
   line-height: 100%;
   background: linear-gradient(180deg, rgba(119, 119, 119, 0.274) 0%, rgba(69, 69, 69, 0.24) 100%);
   border-radius: 5px;
-  font-size: max(0.8rem,var(--fs20));
+  font-size: max(0.8rem, var(--fs20));
 }
+
 .blackBtn {
   color: #fff;
   border: none;
@@ -232,15 +232,15 @@ body {
   line-height: 100%;
   background: linear-gradient(-270.63deg, #ffffff18 0.16%, rgba(70, 70, 70, 0.863) 98.13%);
   border-radius: 3px;
-  font-size: max(0.8rem,var(--fs18));
+  font-size: max(0.8rem, var(--fs18));
   text-transform: capitalize;
 }
 
-.pinkBtn{
+.pinkBtn {
   background-image: var(--pageTheme3);
   padding: 0.3rem 1rem;
-  border:none;
-  font-size: max(0.8rem,var(--fs18));
+  border: none;
+  font-size: max(0.8rem, var(--fs18));
   border-radius: 5px;
   text-transform: capitalize;
 }
@@ -262,7 +262,7 @@ body {
 }
 
 .nova_landing {
-  background: url("../Assets/Landing/landingback.png") no-repeat;
+  background: url("../../public/assets/images/Landing/landingback.png") no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -382,7 +382,7 @@ body {
 }
 
 .accordion-button::after {
-  background-image: url("../Assets/Landing/arrow.png") !important;
+  background-image: url("../../public/assets/images/Landing/arrow.png") !important;
   margin-left: 8px !important;
   transform: rotate(180deg) !important;
 }
@@ -401,7 +401,7 @@ body {
   display: flex;
   position: fixed;
   top: 0;
-  z-index:400;
+  z-index: 400;
   display: none;
   width: 100%;
   align-items: center;
@@ -435,6 +435,7 @@ body {
   width: 30rem;
   padding: 0 2%;
   height: 95%;
+  margin: auto;
 }
 
 .centersection .storySliderContainer {
@@ -491,7 +492,7 @@ body {
   background-image: var(--notifiback);
   color: transparent;
   background-clip: text;
-  font-size: max(0.8rem,var(--fs18));
+  font-size: max(0.8rem, var(--fs18));
 }
 
 .loadMoreBtn::after {
@@ -503,6 +504,7 @@ body {
   background-image: var(--notifiback);
 
 }
+
 .loadMoreBtn2 {
   color: #fff;
   position: relative;
@@ -510,7 +512,7 @@ body {
   background-color: #000;
   border-radius: 5px;
   padding: 0.5rem 2rem;
-  font-size: max(0.8rem,var(--fs18));
+  font-size: max(0.8rem, var(--fs18));
 }
 
 .loadMoreBtn2 span {
@@ -560,6 +562,7 @@ body {
   height: 96%;
   margin-top: auto;
   overflow: auto;
+  margin-right: 7vw;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -590,7 +593,7 @@ body {
   background-color: transparent;
   border: none;
   position: fixed;
-  top:2%;
+  top: 2%;
   z-index: 200;
 }
 
@@ -607,7 +610,7 @@ body {
 }
 
 .componentLayout .childrenWrapper.communityHubLayout {
-  width: max(20rem,30vw);
+  width: max(20rem, 30vw);
 }
 
 .myCreatorTitle {
@@ -629,26 +632,33 @@ body {
   background-clip: text;
   margin: 0;
 }
-.landingScreenMobile{
+
+.landingScreenMobile {
   width: 30%;
   min-width: 24rem;
 }
-.landingScreenMobile img{
+
+.landingScreenMobile img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.playstoreImg,.appstoreImg{
+
+.playstoreImg,
+.appstoreImg {
   width: 150px;
   height: 100px;
   object-fit: contain;
 }
-.css-1u9des2-indicatorSeparator{
+
+.css-1u9des2-indicatorSeparator {
   display: none;
 }
+
 .sidebarContainer {
   height: 99%;
 }
+
 @media screen and (max-width:768px) and (max-width:991px) {
   .cardborder {
     min-width: 330px;
@@ -667,14 +677,15 @@ body {
   .cardborder {
     min-width: 290px;
   }
-  .landingScreenMobile{
+
+  .landingScreenMobile {
     display: none;
   }
 }
 
 @media screen and (max-width:1200px) {
-  .componentLayout .childrenWrapper {
-    /* width: 80%; */
+  .centerAndRightSection .layoutOutlet {
+    margin-right: 0vw;
   }
 }
 
@@ -721,6 +732,7 @@ body {
   .centerAndRightSection .layoutOutlet {
     width: 90%;
     margin-top: 5rem;
+   
   }
 
   .centersection {
@@ -760,13 +772,14 @@ body {
     font-size: 0.9rem;
   }
 
-  .componentLayout .btnWrapper{
+  .componentLayout .btnWrapper {
     width: 100%;
     margin: 0;
-    
+
   }
-  .componentLayout .leftArrowBtn{
-    top:10%;
+
+  .componentLayout .leftArrowBtn {
+    top: 10%;
   }
 
   .componentLayout {
@@ -779,7 +792,7 @@ body {
     width: 100%;
     margin-top: 1rem;
   }
-  
+
   .componentLayout .childrenWrapper.communityHubLayout {
     width: 90%;
   }

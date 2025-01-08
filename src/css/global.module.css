@@ -701,12 +701,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-     /* From https://css.glass */
-     background: rgba(0, 0, 0, 0.8);
-     border-radius: 16px;
-     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-     backdrop-filter: blur(7.2px);
-     -webkit-backdrop-filter: blur(7.2px);
+ 
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
 }
 
 .storyModel .modelCloseBtn {
@@ -714,100 +714,238 @@
     border: none;
     color: #fff;
     font-size: 2rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-}
-
-.storyModel .storiesComponent {
-    width: 500px;
-    height: 100vh;
+    z-index: 999;
 }
 
 .storyModel .storiesComponent .storiesSwiper {
     width: 100%;
     height: 100%;
 }
-.storyModel .storiesComponent .storyHeader{
-    color:var(--white);
+
+/* storyModel.jsx end*/
+
+/* global loader start */
+.loadingComponent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingComponent .pl1 {
+    display: block;
+    width: 8em;
+    height: 8em;
+}
+
+.loadingComponent .pl1__g,
+.loadingComponent .pl1__rect {
+    animation: pl1-a 1.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.loadingComponent .pl1__g {
+    transform-origin: 64px 64px;
+}
+
+.loadingComponent .pl1__rect:first-child {
+    animation-name: pl1-b;
+}
+
+.loadingComponent .pl1__rect:nth-child(2) {
+    animation-name: pl1-c;
+}
+
+@keyframes pl1-a {
+    from {
+        transform: rotate(0);
+    }
+
+    80%,
+    to {
+        animation-timing-function: steps(1, start);
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes pl1-b {
+    from {
+        animation-timing-function: cubic-bezier(0.33, 0, 0.67, 0);
+        width: 40px;
+        height: 40px;
+    }
+
+    20% {
+        animation-timing-function: steps(1, start);
+        width: 40px;
+        height: 0;
+    }
+
+    60% {
+        animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+        width: 0;
+        height: 40px;
+    }
+
+    80%,
+    to {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@keyframes pl1-c {
+    from {
+        animation-timing-function: cubic-bezier(0.33, 0, 0.67, 0);
+        width: 40px;
+        height: 40px;
+        transform: translate(0, 48px);
+    }
+
+    20% {
+        animation-timing-function: cubic-bezier(0.33, 1, 0.67, 1);
+        width: 40px;
+        height: 88px;
+        transform: translate(0, 0);
+    }
+
+    40% {
+        animation-timing-function: cubic-bezier(0.33, 0, 0.67, 0);
+        width: 40px;
+        height: 40px;
+        transform: translate(0, 0);
+    }
+
+    60% {
+        animation-timing-function: cubic-bezier(0.33, 1, 0.67, 1);
+        width: 88px;
+        height: 40px;
+        transform: translate(0, 0);
+    }
+
+    80%,
+    to {
+        width: 40px;
+        height: 40px;
+        transform: translate(48px, 0);
+    }
+}
+
+.instagramStoryComponent .storyWrapper {
+    width: 30vw;
+    min-width: 25rem;
+    height: 100vh;
+    position: relative;
+    padding:0 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #000;
+}
+
+.instagramStoryComponent .storyHeader {
+    width: 100%;
     display: flex;
     align-items: center;
-    gap:1rem;
-    
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem 0.5rem;
 }
-.storyModel .storiesComponent .storyHeader .imgPart{
-    width: 50px;
+
+.instagramStoryComponent .profilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
-.storyModel .storiesComponent .storyHeader .imgPart img{
-    width: 100%;
-}
-.storyModel .storiesComponent .storyHeader .detailsPart h2{
-    font-size: 0.9rem;
+
+.instagramStoryComponent .storyHeader h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
     margin: 0;
 }
-.storyModel .storiesComponent .storyHeader .detailsPart p{
+
+.instagramStoryComponent .storyHeader p {
+    color: white;
     font-size: 0.8rem;
     margin: 0;
 }
 
-.storyPlayerContainer{
-    width: 100%;
-    height: 100%;
-    height: 100vh;
-    position: relative;
-    z-index: 9999;
-}
-
-.storyPlayerContainer .customButtons{
-    color:#fff;
-    position: absolute;
-    top:50%;
-    width: 100%;
+.instagramStoryComponent .storyContent {
+    flex: 1;
+    height:78%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* position:relative; */
+}
+
+.instagramStoryComponent .storyMedia {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.instagramStoryComponent .storyControls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 98%;
+    display: flex;
     justify-content: space-between;
+    /* pointer-events: none; */
     z-index: 999;
-
+    padding: 0;
 }
-.storyPlayerContainer .customButtons button{
+
+.instagramStoryComponent .controlButton {
+    border: none;
+    /* pointer-events: all; */
+    color: white;
+    font-size: 24px;
     cursor: pointer;
-    border:none;
-    color:#fff;
-    font-size: 3rem;
-    background-color: transparent;
-    display: flex;
-}
-
-.storyPlayerContainer .storyInputWrapper{
-    position: absolute;
-    bottom: 2%;
-    width: 100%;
-    z-index: 999;
-}
-
-/* .storyPlayerContainer .videoContainer{
-    width: 100%;
-    height: fit-content;
-    margin: auto;
-    
-}
-.storyPlayerContainer .videoContainer video,
-.storyPlayerContainer .videoContainer img{
-    width: 100%;
-    height: fit-content;
-    margin: auto;
-}
-.storyPlayerContainer  .swiperVideoSlider { 
-    height: 90%;
-}
-.storyPlayerContainer  .swiperVideoSlider .swiperSlideVideoSlider{
-    height: 100%;
-    display: flex;
+    display:flex;
     align-items: center;
-}  */
+    justify-content: center;
+    padding: 0;
+    /* width: 50px; */
+    /* height: 50px; */
+    transition: all 0.1s;
+    background-color: transparent;
+}
+.instagramStoryComponent .controlButton:active {
+    transform: scale(0.8);
+}
+.instagramStoryComponent .controlButton *{
+    display: flex;
+}
 
-/* storyModel.jsx end*/
+.instagramStoryComponent .progressIndicators {
+    display: flex;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    gap: 5px;
+    padding: 0 10px;
+}
 
+.instagramStoryComponent .progressBar {
+    width: 100%;
+    height: 4px;
+    border-radius: 100px;
+    background: #494949;
+}
+
+.instagramStoryComponent .innerProgressBar {
+    height: 100%;
+    border-radius: 100px;
+    background-color: #fff;
+}
+
+/* global loader end */
 /* media qurey */
 @media screen and (max-width:575px) {
 
@@ -823,6 +961,12 @@
     .channelCardTemplate .rightPart {
         width: 100%;
     }
-
     /* channelCard.jsx end */
+}
+@media screen and (max-width:350px){
+      .instagramStoryComponent .storyWrapper {
+        width: 75%;
+        min-width: 75%;
+        margin: auto;
+    }
 }

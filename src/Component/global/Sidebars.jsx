@@ -6,18 +6,17 @@ import ImgComponent from '@/Component/global/imgComponent';
 import { usePathname } from 'next/navigation';
 
 function Sidebars() {
-    const router = usePathname(); // Get the router instance
-        console.log('router',router)
+    const router = usePathname(); 
     const navLinks = [
         { imageSrc: Images.profileicon, labelText: 'Profile', navLink: '/profile' },
         { imageSrc: Images.search, labelText: 'Search', navLink: '/search' },
         { imageSrc: Images.connect, labelText: 'Connect', navLink: '/connect' },
         { imageSrc: Images.market, labelText: 'Market', navLink: '/market' },
-        { imageSrc: Images.creativehub, labelText: 'Creative Hub', navLink: '/creative-hub' },
+        { imageSrc: Images.creativehub, labelText: 'Creator Hub', navLink: '/creator-hub' },
         { imageSrc: Images.communityhub, labelText: 'Community Hub', navLink: '/community-hub' },
         // { imageSrc: Images.maps, labelText: 'Maps', navLink: '/maps' },
         { imageSrc: Images.createicon, labelText: 'Create', navLink: '/create' },
-        { imageSrc: Images.dmsIcon, labelText: 'DMS', navLink: '/dms' },
+        { imageSrc: Images.dmsIcon, labelText: 'DMS', navLink: '/chat-list' },
     ];
 
     return (

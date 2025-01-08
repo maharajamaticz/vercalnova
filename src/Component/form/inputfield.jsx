@@ -151,7 +151,7 @@ export const FileUploadInputComponent = ({
         const file = event.target.files[0];
         if (file) {
             setFileName(file.name);
-            if(onInputChange){
+            if (onInputChange) {
                 onInputChange(file);
             }
         }
@@ -201,10 +201,10 @@ export const SelectInputComponent = ({
     const [values, setValues] = useState([]);
     const handleChange = (selectedValues) => {
         setValues(selectedValues);
-        if(onInputChange){
+        if (onInputChange) {
             onInputChange(selectedValues.value)
         }
-        console.log('selectedValues',selectedValues.value)
+        console.log('selectedValues', selectedValues.value)
     };
 
     // useEffect(() => {
@@ -250,13 +250,13 @@ export const SelectInputComponent = ({
         singleValue: (provided, state) => ({
             ...provided,
             border: "none",
-            color: "#fff", // Sets the color of the selected value to white
+            color: "#fff",
 
         }),
         control: (baseStyles, state) => ({
             ...baseStyles,
             padding: 0,
-            backgroundColor: "#000",
+            backgroundColor: "transparant",
             border: "1px solid #5e5e5e",
             "&:hover": {
                 border: "1px solid #fff",
@@ -332,3 +332,23 @@ export const SelectInputComponent = ({
         </>
     );
 };
+
+export const ToggleInput = ({ id, defaultChecked, onChange }) => {
+    const handleChange = (event) => {
+        if (onChange) {
+            onChange(event.target.checked);
+        }
+    };
+
+    return (
+        <label className={styles.toggleSwitch}>
+            <input
+                id={id}
+                type="checkbox"
+                defaultChecked={defaultChecked}
+                onChange={handleChange}
+            />
+            <span className={styles.toggleSlider}></span>
+        </label>
+    );
+}

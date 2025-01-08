@@ -84,8 +84,8 @@ export function SvgPlusElement({ themeType = "theme1" }) {
                     <path d="M0.842529 9.96887H9.9377V0.688477H17.4242V9.96887H26.6431V16.8825H17.4242V26.2251H9.9377V16.8825H0.842529V9.96887Z" fill="url(#paint0_linear_476_2790)" />
                     <defs>
                         <linearGradient id="paint0_linear_476_2790" x1="26.6431" y1="14.9055" x2="6.75943" y2="3.98891" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FC66C5" />
-                            <stop offset="1" stop-color="#6F88FF" />
+                            <stop stopColor="#FC66C5" />
+                            <stop offset="1" stopColor="#6F88FF" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -99,8 +99,8 @@ export function SvgPlusElement({ themeType = "theme1" }) {
                     <path d="M0.842529 9.96887H9.9377V0.688477H17.4242V9.96887H26.6431V16.8825H17.4242V26.2251H9.9377V16.8825H0.842529V9.96887Z" fill="url(#paint0_linear_476_2790)" />
                     <defs>
                         <linearGradient id="paint0_linear_476_2790" x1="26.6431" y1="14.9055" x2="6.75943" y2="3.98891" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FC66C5" />
-                            <stop offset="1" stop-color="#6F88FF" />
+                            <stop stopColor="#FC66C5" />
+                            <stop offset="1" stopColor="#6F88FF" />
                         </linearGradient>
                     </defs>
                 </svg>

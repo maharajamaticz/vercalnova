@@ -149,7 +149,9 @@ const Images = {
     addPassIcon:"/assets/images/profile/addPassIcon.png",
     passTicketIcon:"/assets/images/profile/passTicketIcon.png",
     passArrowIcon:"/assets/images/profile/passArrowIcon.png",
-   
+    
+    // test video 
+    videoSrc:"/assets/video/test-video.mp4",
 }
 
 // const Images={

@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import "./globals.css";
+import 'bootstrap/dist/css/bootstrap.css';
 import { Toaster } from 'sonner';
 export const metadata = {
   title: "Nova Super App",

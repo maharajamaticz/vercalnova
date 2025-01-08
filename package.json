@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-     "prod": "next export"
+    "prod": "next export"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -20,6 +20,7 @@
     "react-insta-stories": "^2.7.0",
     "react-qr-code": "^2.0.15",
     "react-select": "^5.9.0",
+    "react-simple-star-rating": "^5.1.7",
     "sonner": "^1.7.1",
     "swiper": "^11.1.15"
   }

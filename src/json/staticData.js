@@ -9,7 +9,7 @@ const postData = [
         content: "Just posted a view video",
         postLists: [
             {
-                postId:110,
+                postId: 110,
                 imgSrc: Images.postImg,
                 likeCount: "28.5M",
                 commentCount: "12K",
@@ -34,7 +34,7 @@ const postData = [
                         { id: 3, username: 'user3', userImg: Images.userProfileIcon, text: 'Love this! dolores amet neque eos unde ullam incidunt doloribus, dolore repellat vel veritatis aperiam et animi sed tempore, obcaecati error excepturi quas?', likes: 2, replies: [] },
                     ]
             }, {
-                postId:111,
+                postId: 111,
                 imgSrc: Images.postImg,
                 likeCount: "28.5M",
                 commentCount: "12K",
@@ -69,7 +69,7 @@ const postData = [
         content: "Just posted a view video",
         postLists: [
             {
-                postId:112,
+                postId: 112,
                 imgSrc: Images.postImg,
                 likeCount: "28.5M",
                 commentCount: "12K",
@@ -99,7 +99,7 @@ const postData = [
                         { id: 3, username: 'user3', userImg: Images.userProfileIcon, text: 'Love this! dolores amet neque eos unde ullam incidunt doloribus, dolore repellat vel veritatis aperiam et animi sed tempore, obcaecati error excepturi quas?', likes: 2, replies: [] },
                     ]
             }, {
-                postId:113,
+                postId: 113,
                 imgSrc: Images.postImg,
                 likeCount: "28.5M",
                 commentCount: "12K",
@@ -133,7 +133,7 @@ const postData = [
         content: "Just posted a view video",
         postLists: [
             {
-                postId:114,
+                postId: 114,
                 imgSrc: Images.postImg,
                 likeCount: "28.5M",
                 commentCount: "12K",
@@ -170,14 +170,14 @@ const postData = [
 const postOverViewData = [
     {
         userId: 101,
-        postId:111,
+        postId: 111,
         imgSrc: Images.communityhubPostImage,
         likeCount: "28.5M",
         commentCount: "12K",
         shareCount: "300K",
         time: "10mins",
         tagLine: "Kelly: Technology information aaaaaa",
-        category:"video",
+        category: "video",
         commentList:
             [
                 {
@@ -198,14 +198,14 @@ const postOverViewData = [
     },
     {
         userId: 101,
-        postId:112,
+        postId: 112,
         imgSrc: Images.postImg,
         likeCount: "28.5M",
         commentCount: "12K",
         shareCount: "300K",
         time: "10mins",
         tagLine: "Kelly: Technology information",
-        category:"audio",
+        category: "audio",
         commentList:
             [
                 {
@@ -226,14 +226,14 @@ const postOverViewData = [
     },
     {
         userId: 102,
-        postId:113,
+        postId: 113,
         imgSrc: Images.postImg,
         likeCount: "28.5M",
         commentCount: "12K",
         shareCount: "300K",
         time: "10mins",
         tagLine: "Kelly: Technology information",
-        category:"music",
+        category: "music",
         commentList:
             [
                 {
@@ -260,14 +260,14 @@ const postOverViewData = [
     {
 
         userId: 102,
-        postId:114,
+        postId: 114,
         imgSrc: Images.communityhubPostImage,
         likeCount: "28.5M",
         commentCount: "12K",
         shareCount: "300K",
         time: "10mins",
         tagLine: "Music: The Dark Knight Rises",
-        category:"photos",
+        category: "photos",
         commentList:
             [
                 {
@@ -287,14 +287,14 @@ const postOverViewData = [
     },
     {
         userId: 103,
-        postId:115,
+        postId: 115,
         imgSrc: Images.postImg,
         likeCount: "28.5M",
         commentCount: "13K",
         shareCount: "300K",
         time: "10mins",
         tagLine: "Kelly: Technology information",
-        category:"photos",
+        category: "photos",
         commentList:
             [
                 {
@@ -500,20 +500,42 @@ const categoryFilterList = [
     { keyName: "Spirituality" },
 ];
 
-const selectOption=[
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
+const selectOption = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
 ]
 
-const suggestionUserList=[
+const suggestionUserList = [
     { id: 1, name: "Azeem Roman", img: Images.profile, followed: false },
     { id: 2, name: "Richard Hacker", img: Images.profile1, followed: false },
     { id: 3, name: "Marvin McKevirn", img: Images.profile2, followed: false },
     { id: 4, name: "Walker Lincoln", img: Images.profile, followed: false },
     { id: 5, name: "Tom Holland", img: Images.profile2, followed: false },
     { id: 6, name: "Funny guy", img: Images.profile3, followed: false },
-  ]
+]
+
+const profilePosts = {
+    posts: [
+        { imgSrc: Images.postImg1, },
+        { imgSrc: Images.postImg2, },
+        { imgSrc: Images.postImg3, },
+        { imgSrc: Images.postImg4, },
+        { imgSrc: Images.postImg5, },
+        { imgSrc: Images.postImg6, },
+    ],
+    pins: [
+        { imgSrc: Images.postImg4, },
+        { imgSrc: Images.postImg5, },
+        { imgSrc: Images.postImg6, },
+    ],
+    private: [
+        { imgSrc: Images.postImg1, },
+        { imgSrc: Images.postImg2, },
+        { imgSrc: Images.postImg5, },
+        { imgSrc: Images.postImg6, },
+    ],
+}
 
 
-export { postData, postOverViewData, chatListData, notificationData, daoFilterList, categoryFilterList,selectOption,suggestionUserList };
+export { postData, postOverViewData, chatListData, notificationData, daoFilterList, categoryFilterList, selectOption, suggestionUserList, profilePosts };

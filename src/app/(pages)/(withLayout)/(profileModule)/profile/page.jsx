@@ -5,7 +5,11 @@ import Images from '@/app/Images';
 import ImgComponent from '@/Component/global/imgComponent';
 import { useRouter } from 'next/navigation';
 import { Col, Row } from 'react-bootstrap';
-export default function OrganizationProfilePage() {
+import StarRating from '@/Component/global/starRating';
+import { ToggleInput } from '@/Component/form/inputfield';
+import PostListCategory from '@/Component/profiles/postListCategory';
+import { profilePosts } from '@/json/staticData';
+export default function CreatorProfilePage() {
   const router = useRouter();
   return (
     <section>
@@ -32,9 +36,9 @@ export default function OrganizationProfilePage() {
         <h2>Annonucements</h2>
         <p>Welcome to the DAO Here you can try ,learn ,vote ,and enjoy’s your experience of being a part of your first DAO. Check the is newsfeed, there're some helpful posts to ready!</p>
       </div>
-      <div className={`d-flex gap-2 justify-content-between flex-wrap ${styles.profileActionBtns}`}>
-        <button className='pinkBtn px-5 py-3'>Edit Profile</button>
-        <button className='pinkBtn px-5 py-3'>Share Profile</button>
+      <div className={`d-flex gap-2 justify-content-between ${styles.profileActionBtns}`}>
+        <button className='pinkBtn'>Edit Profile</button>
+        <button className='pinkBtn'>Share Profile</button>
       </div>
       <div className={styles.grpProfileWrapper}>
 
@@ -136,6 +140,26 @@ export default function OrganizationProfilePage() {
           </div>
         </div>
       </div>
+      <div className={styles.reviewContainer}>
+          <div className={styles.headerPart}>
+            <h2>Review</h2>
+            <button>+ Add Review</button>
+          </div>
+          <div className={styles.reviewPart}>
+            <StarRating rateVal={4} readOnly/>
+            <div className={styles.reviewDetails}>
+              <h2>Rated <span>5.5</span> By James Dec 16 2024</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis praesentium repudiandae quisquam. Eius animi at facilis aperiam facere impedit?</p>
+            </div>
+          </div>
+      </div>
+      <div className={styles.toggleContainer}>
+        <label htmlFor="makeContentPrivate">
+        Make Content Private
+        </label>
+        <ToggleInput id={"makeContentPrivate"} defaultChecked={true}/>
+      </div>
+      <PostListCategory postData={profilePosts}/>
     </section>
   )
 }
