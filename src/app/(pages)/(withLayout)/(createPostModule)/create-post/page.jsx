@@ -31,6 +31,7 @@ export default function page() {
 
     const postHandle=()=>{
         successToast({msg:"Post Successfully Added"});
+        router.push("/connect");
     }
     return (
         <ComponentLayout dynamicClass={"communityHubLayout"} customBackHandle={customBackHandle}>
