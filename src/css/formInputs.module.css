@@ -47,8 +47,8 @@
     font-weight: 900;
 }
 
-.inputsContainer .inputWrapper input,
-.inputsContainer .inputWrapper textarea {
+.inputsContainer .inputWrapper>input,
+.inputsContainer .inputWrapper>textarea {
     width: 100%;
     background-color: transparent;
     border: 1px solid #5e5e5e;
@@ -78,6 +78,10 @@
 
 .inputsContainer .inputWrapper .reactSelectContainer {
     width: 100%;
+}
+
+.inputsContainer .inputWrapper .reactSelectContainer .customReactSelectInput >div >div:first-child{
+     padding: 0 0rem;
 }
 
 .inputsContainer .errorText {
@@ -192,5 +196,5 @@
 
 .toggleSwitch input:checked+.toggleSlider:before {
     transform: translateX(1.6em);
-    background-color:#098F13;
+    background-color: #098F13;
 }

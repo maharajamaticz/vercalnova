@@ -4,12 +4,14 @@ import styles from "@/css/formInputs.module.css";
 import Images from "@/app/Images";
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import ImgComponent from "../global/imgComponent";
-import Select, { components } from "react-select";
+// import Select, { components } from "react-select";
+import dynamic from 'next/dynamic';
+const Select = dynamic(() => import('react-select'), { ssr: false });
 
 export const InputComponent = ({
     type = "text",
     placeholder = " ",
-    labelText = "Label Name",
+    labelText,
     errorText,
     copyBtn = false,
     onInputChange,
@@ -40,7 +42,9 @@ export const InputComponent = ({
 
     return (
         <div className={`${styles.inputsContainer} ${styles.inputComponent}`}>
+            {labelText &&
             <label className={styles.inputLabel} htmlFor="input">{labelText}</label>
+            }
             <div className={styles.inputWrapper}>
                 <input
                     ref={inputRef}
@@ -69,59 +73,6 @@ export const InputComponent = ({
         </div>
     );
 };
-
-// export const InputComponent = ({
-//     type = "text",
-//     placeholder = " ",
-//     labelText = "label Name",
-//     errorText,
-//     copyBtn = false,
-// }) => {
-//     const inputRef = useRef(null);
-//     const [copyStatus, setCopyStatus] = useState("");
-
-//     const handleCopy = () => {
-//         if (inputRef.current) {
-//             if (inputRef.current.value.trim()) {
-//                 inputRef.current.select();
-//                 navigator.clipboard.writeText(inputRef.current.value)
-//                     .then(() => setCopyStatus("Copied!"))
-//                     .catch(() => setCopyStatus("Failed to copy!"));
-//                 setTimeout(() => {
-//                     setCopyStatus("")
-//                 }, 2000);
-//             }
-//         }
-//     };
-
-//     return (
-//         <div className={`${styles.inputsContainer} ${styles.inputComponent}`}>
-//             <label className={styles.inputLabel} htmlFor="input">{labelText}</label>
-//             <div className={styles.inputWrapper}>
-//                 <input
-//                     ref={inputRef}
-//                     id="input"
-//                     type={type}
-//                     placeholder={placeholder}
-//                     className={`${styles.inputField} ${copyBtn && styles.copyInput}`}
-//                 />
-//                 {copyBtn && (
-//                     <button
-//                         type="button"
-//                         className={styles.copyBtn}
-//                         onClick={handleCopy}
-//                     >
-//                         {copyStatus.length !== 0 ?
-//                             <IoCheckmarkDoneCircle /> :
-//                             <ImgComponent src={Images.copyIcon} alt="copy" />
-//                         }
-//                     </button>
-//                 )}
-//             </div>
-//             <p className={styles.errorText}>{errorText}</p>
-//         </div>
-//     );
-// };
 
 export const TextAreaInputComponent = ({ onInputChange, labelText = "label Name", placeholder, errorText }) => {
     const handleChange = (event) => {
@@ -189,14 +140,15 @@ export const FileUploadInputComponent = ({
 };
 
 export const SelectInputComponent = ({
-    labelText = "label Name",
+    labelText,
     options,
     placeholderText,
     defultSelectValue,
     getSelectValues,
     optionsType,
     errorText,
-    onInputChange
+    onInputChange,
+    isSearchable = false
 }) => {
     const [values, setValues] = useState([]);
     const handleChange = (selectedValues) => {
@@ -206,7 +158,6 @@ export const SelectInputComponent = ({
         }
         console.log('selectedValues', selectedValues.value)
     };
-
     // useEffect(() => {
     //   if (getSelectValues) getSelectValues(values);
     // }, [values]);
@@ -246,6 +197,8 @@ export const SelectInputComponent = ({
             color: "#fff",
             padding: "0.4rem",
             border: "none",
+            // display:`${isSearchable?"flex":"none"}`
+            // width:`${isSearchable?"auto":"0px"}`
         }),
         singleValue: (provided, state) => ({
             ...provided,
@@ -281,7 +234,7 @@ export const SelectInputComponent = ({
             padding: "0",
             marginRight: "0",
         }),
-        multiValueRemove: (provided) => ({ ...provided, display: "none" }),
+        // multiValueRemove: (provided) => ({ ...provided, display: "none" }),
         option: (provided, state) => ({
             ...provided,
             fontSize: "1rem",
@@ -300,15 +253,20 @@ export const SelectInputComponent = ({
     return (
         <>
             <div className={`${styles.inputsContainer} ${styles.inputComponent}`}>
-                <label className={styles.inputLabel} htmlFor="input">{labelText}</label>
+                {
+                    labelText &&
+                    <label className={styles.inputLabel} htmlFor="input">{labelText}</label>
+                }
                 <div className={styles.inputWrapper}>
                     <div className={styles.reactSelectContainer}>
                         <Select
-                            //   isSearchable={false}
+                            // isSearchable={true}
+                            isSearchable={false}
                             name="colors"
                             options={options}
                             onChange={handleChange}
-                            //   defaultValue={optionsType ? dynamicOption[0] : defultSelectValue}
+                            defaultValue={defultSelectValue}
+                            className={styles.customReactSelectInput}
                             // defaultValue={values[0]}
                             // defaultValue={
                             //   dynamicOption.length !== 0 ? dynamicOption[0] : defultSelectValue
@@ -320,7 +278,6 @@ export const SelectInputComponent = ({
                                 colors: {
                                     ...theme.colors,
                                     primary: "#3d3d3d",
-
                                 },
                             })}
                         />

@@ -15,14 +15,14 @@ function Sidebars() {
         { imageSrc: Images.creativehub, labelText: 'Creator Hub', navLink: '/creator-hub' },
         { imageSrc: Images.communityhub, labelText: 'Community Hub', navLink: '/community-hub' },
         // { imageSrc: Images.maps, labelText: 'Maps', navLink: '/maps' },
-        { imageSrc: Images.createicon, labelText: 'Create', navLink: '/create' },
+        { imageSrc: Images.createicon, labelText: 'Create', navLink: '/create-post' },
         { imageSrc: Images.dmsIcon, labelText: 'DMS', navLink: '/chat-list' },
     ];
 
     return (
         <div className={`${styles.sidebar}`}>
             <div className={`text-center`}>
-                <ImgComponent src={Images.logo} className={`${styles.sidelogo} mt-3`} alt='logo' />
+                <ImgComponent   src={Images.logo} className={`${styles.sidelogo} mt-3`} alt='logo' />
             </div>
             <div className={`${styles.sidebartab}`}>
                 {navLinks.map((link, index) => {

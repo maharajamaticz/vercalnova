@@ -501,9 +501,9 @@ const categoryFilterList = [
 ];
 
 const selectOption = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
+    { value: 'option1', label: 'option1' },
+    { value: 'option2', label: 'option2' },
+    { value: 'option3', label: 'option3' }
 ]
 
 const suggestionUserList = [

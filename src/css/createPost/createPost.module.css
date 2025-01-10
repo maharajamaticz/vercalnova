@@ -1,0 +1,359 @@
+.createPostPage .uploadPostSection .navHeaderPart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.createPostPage .uploadPostSection .navHeaderPart h2 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.createPostPage .uploadPostSection .navHeaderPart>button {
+    color: yellow;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+}
+
+.createPostPage .uploadPostSection .navHeaderPart .optionsPart ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+
+}
+
+.createPostPage .uploadPostSection .navHeaderPart .optionsPart ul li button {
+    width: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.createPostPage .uploadPostSection .navHeaderPart .optionsPart ul li button:active {
+    transform: scale(0.9);
+}
+
+.createPostPage .uploadPostSection .navHeaderPart .optionsPart ul li button img {
+    width: 100%;
+}
+
+.createPostPage .uploadPostSection .navHeaderPart>p {
+    color: var(--white);
+    text-decoration: underline !important;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.createPostPage .uploadPostSection .imgPreviewContainer img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.createPostPage .uploadPostSection .userImgListContainer .headerPart {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.createPostPage .uploadPostSection .userImgListContainer .headerPart button {
+    background-color: transparent !important;
+    border: none;
+}
+
+.createPostPage .uploadPostSection .userImgListContainer .headerPart>div div {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.createPostPage .uploadPostSection .userImgListContainer .headerPart>div div * {
+    color: #fff !important;
+}
+
+.createPostPage .uploadPostSection .userImgListContainer .headerPart>p {
+    color: #fff;
+    margin: 0;
+}
+
+.createPostPage .uploadPostSection .userDraftContainer {
+    position: relative;
+
+}
+
+.createPostPage .uploadPostSection .userDraftContainer .galleryImgWrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+
+.createPostPage .uploadPostSection .userDraftContainer .galleryImgWrapper .galleryContainer {
+    width: calc(100% / 4 - 0.2rem);
+    cursor: pointer;
+}
+
+.createPostPage .uploadPostSection .userDraftContainer .galleryImgWrapper .galleryContainer:hover {
+    opacity: 0.8;
+}
+
+.createPostPage .uploadPostSection .userDraftContainer .galleryImgWrapper .galleryContainer img {
+    width: 100%;
+
+}
+
+.createPostPage .uploadPostSection .userDraftContainer .storyTypeList {
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.createPostPage .uploadPostSection .userDraftContainer .storyTypeList ul {
+    width: fit-content;
+    margin: auto;
+    padding: 0.7rem 2rem;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    background-color: #1C5075;
+    border-radius: 100px;
+    flex-wrap: wrap;
+}
+
+.createPostPage .uploadPostSection .userDraftContainer ul li input {
+    display: none;
+}
+
+.createPostPage .uploadPostSection .userDraftContainer ul li label {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.createPostPage .uploadPostSection .userDraftContainer ul li label span {
+    opacity: 0.5;
+}
+
+.createPostPage .uploadPostSection .userDraftContainer ul li input:checked~span {
+    opacity: 1;
+}
+
+.createPostPage .uploadPostSection .userDraftContainer ul li:hover span {
+    opacity: 1;
+}
+
+.createPostPage .uploadPostSection .imgShowContainer {
+    width: 100%;
+    min-height: 250px;
+    height: 30vw;
+    max-height: 500px;
+
+}
+
+.createPostPage .uploadPostSection .imgShowContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.createPostPage .uploadPostSection .musicList {
+    display: flex;
+    padding: 1rem 0;
+
+}
+
+.createPostPage .uploadPostSection .musicList .fileUpload p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+
+}
+
+.createPostPage .uploadPostSection .musicList .fileUpload input {
+    display: none;
+}
+
+.createPostPage .uploadPostSection .musicList .fileUpload label {
+    width: 80px;
+    height: 77px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2805FE;
+    cursor: pointer;
+}
+
+.createPostPage .uploadPostSection .musicList .fileUpload img {
+    width: 30%;
+    height: 30%;
+    display: flex;
+}
+
+.createPostPage .uploadPostSection .musicList .musicSliderWrapper {
+    width: 82%;
+}
+
+.createPostPage .uploadPostSection .musicList .musicSliderWrapper .musicSwiperSlide {
+    width: 80px;
+    margin: 0 0.5rem;
+}
+
+.createPostPage .uploadPostSection .musicList .musicSliderWrapper .musicSwiperSlide .musicContainer {
+    cursor: pointer;
+}
+
+.createPostPage .uploadPostSection .musicList .musicSliderWrapper .musicSwiperSlide img {
+    width: 100%;
+}
+
+.createPostPage .uploadPostSection .musicList .musicSliderWrapper .musicSwiperSlide p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+}
+
+.createPostPage .uploadPostSection .btnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.createPostPage .uploadPostSection .btnWrapper button {
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.createPostPage .uploadPostSection .btnWrapper .editBtn {
+    color: #fff;
+    background: linear-gradient(360deg, #373C3F 0%, #909DA5 100%);
+}
+
+.createPostPage .uploadPostSection .btnWrapper .nextBtn {
+    background: var(--notifiback);
+}
+
+.createPostPage .uploadPostSection .postContentPart .imgPreviewPart {
+    width: 100%;
+    height: 250px;
+}
+
+.createPostPage .uploadPostSection .postContentPart .imgPreviewPart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper {
+    margin: 1rem 0;
+    border: 2px solid #474747;
+    padding: 0.5rem;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper {
+    container-type: inline-size;
+    container-name: inputContainerQuery;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart textarea {
+    width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    background-color: transparent;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    resize: none;
+    font-size: 0.9rem;
+    border: none;
+
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart>label {
+    color: var(--white);
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart label img {
+    width: 20px;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart label p {
+    margin: 0;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart label span {
+    color: #ff0000;
+    padding: 0 0.5rem;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart .inputWrapper {
+    width: 30%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart .inputWrapper * {
+    border:none !important; 
+    outline: none !important;
+}
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart .inputWrapper input::placeholder{
+    color:#797979;
+}
+
+@container inputContainerQuery (max-width: 350px) {
+    .createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart .inputWrapper {
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart>div>div {
+    width: 100%;
+    min-width: 120px;
+    margin: 0;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .inputFieldPart input {
+    padding: 0.5rem;
+}
+
+.createPostPage .uploadPostSection .postContentPart .postInputWrapper .postBtn button {
+    font-size: 1.2rem;
+    width: 100%;
+    background: var(--notifiback);
+    border-radius: 8px;
+    padding: 1rem 0.5rem;
+    border: none;
+    font-weight: 900;
+}

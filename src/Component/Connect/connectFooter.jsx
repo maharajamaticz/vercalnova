@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../../css/connect/connect.module.css";
+import styles from "@/css/connect/connect.module.css";
 import Link from 'next/link';
 
 export default function ConnectFooter() {
@@ -8,10 +8,9 @@ export default function ConnectFooter() {
         { labelText: 'Search', navLink: '/search' },
         { labelText: 'Connect', navLink: '/connect' },
         { labelText: 'Market', navLink: '/market' },
-        { labelText: 'Creative Hub', navLink: '/creative-hub' },
+        { labelText: 'Creative Hub', navLink: '/creator-hub' },
         { labelText: 'Community Hub', navLink: '/community-hub' },
-        { labelText: 'Maps', navLink: '/maps' },
-        { labelText: 'Create', navLink: '/create' },
+        { labelText: 'Create', navLink: '/create-post' },
     ];
 
     return (

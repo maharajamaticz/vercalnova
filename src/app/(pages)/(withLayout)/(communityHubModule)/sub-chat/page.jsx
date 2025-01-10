@@ -56,7 +56,7 @@ export default function SubChatPage() {
                 <div className={styles.headerPart}>
                     <h2 className='text-blue-gradient'>Add Subchat</h2>
                 </div>
-                <Friendstories titleText='Members' addBtn />
+                <Friendstories  titleText='Members' addBtn />
                 <div className={styles.taskTemplatePart}>
                     <div className={styles.headerPart}>
                         <h2>Task Template</h2>
@@ -64,7 +64,7 @@ export default function SubChatPage() {
                     <ul>
                         <li>
                             <button className={styles.plusBtn}>
-                                <ImgComponent src={Images.plusIcon} alt="plus icon" />
+                                <ImgComponent   src={Images.plusIcon} alt="plus icon" />
                             </button>
                         </li>
                         {
@@ -86,7 +86,7 @@ export default function SubChatPage() {
                 <div className={styles.chatArea}>
 
                 </div>
-                <ChatInput/>
+                <ChatInput />
             </div>
         </ComponentLayout>
     )

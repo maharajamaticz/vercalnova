@@ -9,10 +9,6 @@ const nextConfig = {
       },
     ];
   },
-  // distDir: 'build',
-  // reactStrictMode: true,
-  // distDir: 'dist',
-  // output: 'export'
 };
 
 export default nextConfig;

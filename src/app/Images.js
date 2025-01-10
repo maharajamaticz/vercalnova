@@ -36,18 +36,15 @@ const Images = {
     creator2: "/assets/images/Landing/creatorimg2.png",
     settingIcon:"/assets/images/connect/settings.png",
     chatBotIcon:"/assets/images/connect/chatBotIcon.png",
-    
     reelLikeIcon:"/assets/images/connect/reelLikeIcon.png",
     reelCommentIcon:"/assets/images/connect/reelCommentIcon.png",
     reelLiveIcon:"/assets/images/connect/reelLiveIcon.png",
     reelMoreIcon:"/assets/images/connect/reelMoreIcon.png",
     reelSaveIcon:"/assets/images/connect/reelSaveIcon.png",
     reelShareIcon:"/assets/images/connect/reelShareIcon.png",
-
     searchIcon:"/assets/images/connect/searchIcon.png",
     chatProfile:"/assets/images/connect/chatProfile.png",
     camaraIcon:"/assets/images/connect/camaraIcon.png",
-
     videoCallIcon:"/assets/images/connect/videoCallIcon.png",
     callIcon:"/assets/images/connect/callIcon.png",
     camaraBlackIcon:"/assets/images/connect/camaraBlackIcon.png",
@@ -67,13 +64,11 @@ const Images = {
     galleryImg1:"/assets/images/communityHub/galleryImg1.png",
     galleryImg2:"/assets/images/communityHub/galleryImg2.png",
     galleryImg3:"/assets/images/communityHub/galleryImg3.png",
-
     chatCardIcon:"/assets/images/communityHub/chatCardIcon.png",
     groupChatIcon:"/assets/images/communityHub/groupChatIcon.png",
     searchCardIcon:"/assets/images/communityHub/searchCardIcon.png",
     deleteIcon:"/assets/images/communityHub/deleteIcon.png",
     copyIcon:"/assets/images/communityHub/copyIcon.png",
-
     bannerImg:"/assets/images/communityHub/bannerImg.png",
     addChatIcon:"/assets/images/communityHub/addChatIcon.png",
     addTaskIcon:"/assets/images/communityHub/addTaskIcon.png",
@@ -119,7 +114,6 @@ const Images = {
     networkIcon:"/assets/images/creativehub/networkIcon.png",
     profileUserImg:"/assets/images/creativehub/profileImg.png",
     profileBannerImg:"/assets/images/creativehub/bannerImg.png",
-
     creatorStudioImg1:"/assets/images/creativehub/creatorStudioImg1.png",
     creatorStudioImg2:"/assets/images/creativehub/creatorStudioImg2.png",
     creatorStudioImg3:"/assets/images/creativehub/creatorStudioImg3.png",
@@ -130,11 +124,9 @@ const Images = {
     creatorStudioImg8:"/assets/images/creativehub/creatorStudioImg8.png",
     creatorStudioImg9:"/assets/images/creativehub/creatorStudioImg9.png",
     creatorStudioImg10:"/assets/images/creativehub/creatorStudioImg10.png",
-
     postIcon:"/assets/images/creativehub/postIcon.png",
     pinIcon:"/assets/images/creativehub/pinIcon.png",
     privateIcon:"/assets/images/creativehub/privateIcon.png",
-    
     postImg1:"/assets/images/creativehub/postImg1.png",
     postImg2:"/assets/images/creativehub/postImg2.png",
     postImg3:"/assets/images/creativehub/postImg3.png",
@@ -145,16 +137,30 @@ const Images = {
     //profile
     followIcon:"/assets/images/profile/followIcon.png",
     donateIcon:"/assets/images/profile/donateIcon.png",
-
     addPassIcon:"/assets/images/profile/addPassIcon.png",
     passTicketIcon:"/assets/images/profile/passTicketIcon.png",
     passArrowIcon:"/assets/images/profile/passArrowIcon.png",
     
+    // create post
+    postPreview:"/assets/images/createPost/imgPreviewImg.png",
+    postGalleryIcon:"/assets/images/createPost/galleryIcon.png",
+    addTextIcon:"/assets/images/createPost/addTextIcon.png",
+    effectIcon:"/assets/images/createPost/effectIcon.png",
+    filterIcon:"/assets/images/createPost/filterIcon.png",
+    addMusicIcon:"/assets/images/createPost/addMusicIcon.png",
+    createPassIcon:"/assets/images/createPost/addPassIcon.png",
+    locationIcon:"/assets/images/createPost/locationIcon.png",
+    replyIcon:"/assets/images/createPost/replyIcon.png",
+    tagChannelIcon:"/assets/images/createPost/tagChannelIcon.png",
+    tagPeopleIcon:"/assets/images/createPost/tagPeople.png",
+    hashTagIcon:"/assets/images/createPost/hashTagIcon.png",
+    topicSearchIcon:"/assets/images/createPost/topicSearchIcon.png",
+    textIcon:"/assets/images/createPost/textIcon.png",
+    showIcon:"/assets/images/createPost/showIcon.png",
+    musicImg1:"/assets/images/createPost/musicImg1.png",
+    musicImg2:"/assets/images/createPost/musicImg2.png",
     // test video 
     videoSrc:"/assets/video/test-video.mp4",
 }
 
-// const Images={
-//     leftArrowIcon:"/assets/images/global/leftArrowIcon.png"
-// }
 export default Images
